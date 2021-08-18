@@ -16,7 +16,7 @@ def home_page(request):
 def order_page(request):
     if request.GET:
         user = get_user_by_phone(request.GET.get("phone_number",0))
-        return JsonResponse(user, safe=False)
+        return JsonResponse(user)
         # return JsonResponse(user)
 
 def index(request):
